@@ -2,6 +2,8 @@
 """Exercise version bumps and failure rollback in disposable Git repositories; never contacts GitHub."""
 import importlib.util
 import os
+import hashlib
+import json
 from pathlib import Path
 import subprocess
 import sys
@@ -86,6 +88,47 @@ class ReleaseSafetyTest(unittest.TestCase):
         self.assertEqual('', self.git('tag', '--list'))
         self.assertEqual('', self.git('status', '--porcelain'))
         self.assertEqual('1.0.0', release.verify_apk.properties(self.root / 'version.properties')['versionName'])
+
+    def test_draft_assets_are_requested_by_release_id_and_uploaded_before_publication(self):
+        out = self.root / 'out/1.0.0'
+        out.mkdir(parents=True)
+        apk = out / 'Lumen-RU-1.0.0-universal.apk'
+        apk.write_bytes(b'dummy test artifact; never uploaded')
+        (out / 'SHA256SUMS.txt').write_text('dummy checksum for local unit test')
+        (out / 'BUILD.json').write_text('{}')
+        report = {'versionName': '1.0.0', 'versionCode': 1, 'unitTests': 16,
+                  'sha256': hashlib.sha256(apk.read_bytes()).hexdigest(),
+                  'signingCertificateSha256': '0' * 64,
+                  'upstream': {'version': '0.4.2', 'commit': '0' * 40}}
+        real_run = release.run
+        calls = []
+        release_api = 'https://api.github.com/repos/' + release.REPO + '/releases/123'
+        def local_or_fake(*args, capture=False, **kwargs):
+            calls.append(args)
+            if args[0] == 'gh':
+                if args[1:3] == ('release', 'view') and args[-1] == 'apiUrl':
+                    return json.dumps({'apiUrl': release_api})
+                if args[1] == 'api':
+                    self.assertEqual(release_api, args[2])
+                    return '{"assets":[]}'
+                return ''
+            if args[:2] == ('git', 'push'):
+                return ''
+            return real_run(*args, capture=capture, **kwargs)
+        draft = subprocess.CompletedProcess([], 0, '{"isDraft":true}', '')
+        real_subprocess_run = subprocess.run
+        def draft_or_local(args, **kwargs):
+            if args[:3] == ['gh', 'release', 'view']:
+                return draft
+            return real_subprocess_run(args, **kwargs)
+        with patch.object(release, 'run', side_effect=local_or_fake), patch.object(subprocess, 'run', side_effect=draft_or_local):
+            # All Git mutations are inside this disposable repository; gh and push are mocked.
+            release.publish(out, report)
+        uploads = [i for i, command in enumerate(calls) if command[:3] == ('gh', 'release', 'upload')]
+        edits = [i for i, command in enumerate(calls) if command[:3] == ('gh', 'release', 'edit')]
+        self.assertEqual(3, len(uploads))
+        self.assertEqual(1, len(edits))
+        self.assertGreater(edits[0], max(uploads))
 
     def test_build_only_never_publishes_or_changes_version(self):
         before = self.git('rev-parse', 'HEAD')

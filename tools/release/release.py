@@ -155,7 +155,11 @@ def publish(dest, report):
     else:
         run('gh', 'release', 'create', tag, '--repo', REPO, '--verify-tag', '--draft', '--title', f'Lumen RU {version}', '--notes-file', notes)
     # Resume a partial upload by comparing asset checksums; never overwrite existing assets.
-    assets = json.loads(run('gh', 'api', f'repos/{REPO}/releases/tags/{tag}', capture=True))['assets']
+    # GitHub's /releases/tags endpoint excludes drafts; gh resolves them through the release list.
+    release_api = json.loads(run('gh', 'release', 'view', tag, '--repo', REPO, '--json', 'apiUrl', capture=True))['apiUrl']
+    if not release_api.startswith(f'https://api.github.com/repos/{REPO}/releases/'):
+        fail('Unexpected release API URL')
+    assets = json.loads(run('gh', 'api', release_api, capture=True))['assets']
     assets = {a['name']: a for a in assets}
     for path in [dest / f'Lumen-RU-{version}-universal.apk', dest / 'SHA256SUMS.txt', dest / 'BUILD.json']:
         if path.name in assets:
