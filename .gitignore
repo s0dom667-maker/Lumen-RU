@@ -1,3 +1,4 @@
+# Modified 2026 by s0dom667-maker: exclude RU build outputs and private local files.
 .gradle/
 .kotlin/
 build/
@@ -18,3 +19,19 @@ FEATURES.md
 # Native build intermediates (CMake) and Python caches
 app/.cxx/
 __pycache__/
+
+# Lumen RU local output / secrets
+out/
+.toolchains/
+.release.lock
+*.p12
+*.pfx
+*.pem
+*.key
+.env
+.env.*
+signing.properties
+keystore.properties
+*.log
+
+.deps/

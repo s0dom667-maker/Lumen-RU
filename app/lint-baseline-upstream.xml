@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Only 145 existing errors from original Lumen v0.4.2, verified against its source.
+     Do not regenerate to hide new RU errors. New errors still fail releases. -->
+<issues format="6" by="lint 9.4.1" type="baseline" client="gradle" dependencies="false" name="AGP (9.4.1)" variant="all" version="9.4.1">
+    <issue id="ResourceType" message="Expected resource of type styleable">
+        <location file="src/main/java/com/subhashh/lumen/ui/viewer/LiveTextOverlay.kt" line="321" column="55" />
+    </issue>
+    <issue id="ResourceType" message="Expected resource of type styleable">
+        <location file="src/main/java/com/subhashh/lumen/ui/viewer/LiveTextOverlay.kt" line="322" column="56" />
+    </issue>
+    <issue id="NewApi" message="Field requires API level 33 (current min is 30): `android.graphics.Bitmap.Config#RGBA_1010102`">
+        <location file="src/main/java/com/subhashh/lumen/data/MediaDetails.kt" line="246" column="25" />
+    </issue>
+    <issue id="WrongConstant" message="Must be one or more of: MediaCodec.BUFFER_FLAG_SYNC_FRAME, MediaCodec.BUFFER_FLAG_KEY_FRAME, MediaCodec.BUFFER_FLAG_CODEC_CONFIG, MediaCodec.BUFFER_FLAG_END_OF_STREAM, MediaCodec.BUFFER_FLAG_PARTIAL_FRAME, MediaCodec.BUFFER_FLAG_DECODE_ONLY, but could be MediaExtractor.SAMPLE_FLAG_SYNC, MediaExtractor.SAMPLE_FLAG_ENCRYPTED, MediaExtractor.SAMPLE_FLAG_PARTIAL_FRAME">
+        <location file="src/main/java/com/subhashh/lumen/data/MediaFiles.kt" line="226" column="57" />
+    </issue>
+    <issue id="NonObservableLocale" message="Reading locale in a non-observable way in a composable function">
+        <location file="src/main/java/com/subhashh/lumen/ui/viewer/DetailsSheet.kt" line="509" column="52" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`">
+        <location file="src/main/java/com/subhashh/lumen/ui/viewer/VideoPage.kt" line="174" column="13" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`">
+        <location file="src/main/java/com/subhashh/lumen/ui/viewer/VideoPage.kt" line="179" column="50" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`">
+        <location file="src/main/java/com/subhashh/lumen/ui/viewer/VideoPage.kt" line="179" column="81" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`">
+        <location file="src/main/java/com/subhashh/lumen/ui/viewer/ViewerScreen.kt" line="1027" column="9" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`">
+        <location file="src/main/java/com/subhashh/lumen/ui/viewer/ViewerScreen.kt" line="1027" column="21" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`">
+        <location file="src/main/java/com/subhashh/lumen/ui/viewer/ViewerScreen.kt" line="1056" column="28" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`">
+        <location file="src/main/java/com/subhashh/lumen/ui/viewer/ViewerScreen.kt" line="1066" column="45" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`">
+        <location file="src/main/java/com/subhashh/lumen/ui/viewer/ViewerScreen.kt" line="1066" column="78" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`">
+        <location file="src/main/java/com/subhashh/lumen/ui/viewer/ViewerScreen.kt" line="1072" column="41" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`">
+        <location file="src/main/java/com/subhashh/lumen/ui/viewer/ViewerScreen.kt" line="1072" column="74" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`">
+        <location file="src/main/java/com/subhashh/lumen/ui/viewer/ViewerScreen.kt" line="1238" column="40" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`">
+        <location file="src/main/java/com/subhashh/lumen/ui/viewer/ViewerScreen.kt" line="1238" column="82" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/viewer/CutoutOverlay.kt" line="212" column="90" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/viewer/DetailsSheet.kt" line="627" column="30" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/viewer/DetailsSheet.kt" line="667" column="33" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/viewer/DetailsSheet.kt" line="709" column="28" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/components/FaceUpgradeRequest.kt" line="37" column="29" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/components/FaceUpgradeRequest.kt" line="38" column="31" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/components/FaceUpgradeRequest.kt" line="39" column="31" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/components/FaceUpgradeRequest.kt" line="40" column="30" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/hidden/HiddenLockScreen.kt" line="146" column="43" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/hidden/HiddenLockScreen.kt" line="161" column="70" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/hidden/HiddenLockScreen.kt" line="162" column="34" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/hidden/HiddenLockScreen.kt" line="169" column="65" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/hidden/HiddenLockScreen.kt" line="170" column="64" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/hidden/HiddenLockScreen.kt" line="171" column="65" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/hidden/HiddenLockScreen.kt" line="180" column="33" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="735" column="56" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="936" column="23" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="944" column="27" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="957" column="19" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="967" column="23" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="970" column="19" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="986" column="25" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="987" column="27" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="988" column="27" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1034" column="25" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1035" column="27" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1036" column="27" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1054" column="86" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1054" column="133" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1062" column="19" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1065" column="54" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1074" column="43" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1077" column="27" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1088" column="56" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1088" column="116" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1095" column="52" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1095" column="102" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1111" column="43" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1123" column="27" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1130" column="68" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1130" column="127" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1136" column="39" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1157" column="23" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1175" column="42" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1180" column="50" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1200" column="33" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1201" column="23" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1202" column="23" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1209" column="53" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1209" column="99" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1221" column="37" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1224" column="31" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1227" column="27" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1264" column="31" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1277" column="31" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1331" column="61" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1334" column="62" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1408" column="53" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1409" column="57" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1411" column="37" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1412" column="73" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1413" column="36" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1414" column="39" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1547" column="60" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1552" column="39" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1559" column="39" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1565" column="45" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1567" column="44" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1568" column="47" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1575" column="45" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1576" column="47" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1577" column="47" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1604" column="41" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1605" column="43" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1606" column="43" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1810" column="33" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1811" column="47" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1813" column="35" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1922" column="25" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="1958" column="30" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2196" column="31" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2205" column="50" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2206" column="47" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2211" column="37" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2213" column="35" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2483" column="31" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2488" column="31" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2496" column="31" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2496" column="92" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2567" column="39" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2571" column="39" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2593" column="29" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2594" column="31" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2596" column="31" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2597" column="30" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2642" column="44" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2642" column="102" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2707" column="31" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2718" column="35" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2733" column="49" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2734" column="53" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2769" column="50" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2770" column="50" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2771" column="69" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2797" column="59" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2799" column="41" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/LumenApp.kt" line="2800" column="45" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/settings/SettingsScreen.kt" line="902" column="29" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/settings/SettingsScreen.kt" line="915" column="72" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/settings/SmartSearchSettings.kt" line="157" column="39" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/settings/SmartSearchSettings.kt" line="488" column="41" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/settings/SmartSearchSettings.kt" line="489" column="43" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/settings/SmartSearchSettings.kt" line="636" column="71" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/settings/SmartSearchSettings.kt" line="637" column="16" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/settings/SmartSearchSettings.kt" line="640" column="61" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/settings/SmartSearchSettings.kt" line="641" column="63" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/settings/SoftwareUpdate.kt" line="134" column="29" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/settings/SoftwareUpdate.kt" line="136" column="29" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/settings/SoftwareUpdate.kt" line="140" column="41" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/settings/SoftwareUpdate.kt" line="143" column="43" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/components/StarRequest.kt" line="47" column="29" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/components/StarRequest.kt" line="48" column="31" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/components/StarRequest.kt" line="49" column="31" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/components/StarRequest.kt" line="50" column="30" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/viewer/WallpaperScreen.kt" line="141" column="46" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/viewer/WallpaperScreen.kt" line="165" column="115" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/viewer/WallpaperScreen.kt" line="166" column="113" />
+    </issue>
+    <issue id="LocalContextGetResourceValueCall" message="Querying resource values using LocalContext.current is not configuration-aware and may return stale values if the Configuration changes">
+        <location file="src/main/java/com/subhashh/lumen/ui/viewer/WallpaperScreen.kt" line="167" column="145" />
+    </issue>
+</issues>

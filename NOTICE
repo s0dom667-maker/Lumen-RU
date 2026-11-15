@@ -11,3 +11,14 @@ This product includes software developed by third parties:
 
 Every library, model and data set Lumen uses, with its license, is listed in the app under
 Settings → Licenses.
+
+Lumen RU modifications
+Copyright 2026 s0dom667-maker
+Independent Russian localization and local release tooling, under Apache License 2.0.
+Original Lumen author, history and license are retained. This distribution is not an
+original-developer release and is not endorsed by the original developer.
+
+The unchanged Qualcomm QAIRT object-code runtime is included as part of the Android
+application under the Qualcomm AI Stack License. Its license and notices, and the
+LiteRT Qualcomm runtime notices, are retained in app/src/main/assets/lumen-ru/third-party
+and packaged in the APK. These third-party terms are not replaced by Apache-2.0.

@@ -1,3 +1,4 @@
+// Modified 2026 by s0dom667-maker for Lumen RU: separate encrypted storage for parallel installation.
 package com.subhashh.lumen.data.vault
 
 import android.content.Context
@@ -17,7 +18,7 @@ import javax.crypto.SecretKey
 
 /**
  * Settings → Privacy → Encrypt Hidden: hidden photos and videos moved into an encrypted folder,
- * `.LumenVault` on shared storage, where other apps and file managers see only random names and
+ * `.LumenRUVault` on shared storage, where other apps and file managers see only random names and
  * scrambled bytes. It's outside Lumen's sandbox on purpose, so uninstalling Lumen doesn't delete
  * it; the user's Lumen lock opens it again after a reinstall (see [VaultKeys]).
  *
@@ -29,7 +30,7 @@ object Vault {
     const val Scheme = "lumenvault"
     private const val Extension = ".lumenvault"
 
-    fun dir(): File = testDir ?: File(Environment.getExternalStorageDirectory(), ".LumenVault")
+    fun dir(): File = testDir ?: File(Environment.getExternalStorageDirectory(), ".LumenRUVault")
 
     /** Tests only: a throwaway vault folder and keys, never the real ones. */
     internal var testDir: File? = null

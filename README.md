@@ -1,294 +1,45 @@
-<p align="center">
-  <img src="docs/images/icon.png" width="128" alt="The Lumen icon">
-</p>
+# Lumen RU
 
-<h1 align="center">Lumen</h1>
+Независимая русская сборка [Lumen](https://github.com/subhashhhhhh/Lumen), галереи для Android с локальными умными функциями. Автор оригинального приложения — **Subhash Gottumukkala**. История Git, лицензия Apache-2.0 и оригинальные уведомления сохранены. [Исходный README](README.upstream.md).
 
-<p align="center">
-  The smart features of Google Photos and the iPhone Photos app, for Android.<br>
-  Nothing leaves your phone.
-</p>
+Первый релиз RU: **1.0.0**, на основе стабильного **Lumen 0.4.2**. Точная версия и коммит оригинала записаны в [upstream.properties](upstream.properties); версия нашей сборки — в [version.properties](version.properties).
 
-<p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-blue" alt="License: Apache 2.0"></a>
-  <img src="https://img.shields.io/badge/Android-11%2B-3DDC84" alt="Android 11 or later">
-</p>
+- Название приложения: **Lumen RU**.
+- Application ID: **`io.github.s0dom667maker.lumenru`**; можно установить рядом с официальным Lumen.
+- Русские меню, диалоги, настройки, сообщения об ошибках, уведомления и формы множественного числа.
+- Модели OCR, поиска, распознавания лиц, субтитров и вырезания объектов не изменены. Локализация интерфейса не добавляет новые языки распознавания в исходные модели.
+- Отдельное зашифрованное хранилище `.LumenRUVault`; официальное приложение использует `.LumenVault`. Общие фотографии и обычные скрытые папки на устройстве остаются общими.
+- Все APK подписываются постоянным ключом RU. Ключ, пароли и локальные настройки не публикуются.
+- Сборки выполняются локально на Ubuntu Server; GitHub Actions отключён.
 
-<p align="center">
-  <a href="docs/media/lumen-launch.mp4"><img src="docs/images/hero.jpg" width="100%" alt="Lumen on a phone: the Library, a search for a cat that sleeps on a chair, and the page of a person"></a>
-</p>
+## Установка и Obtainium
 
-<p align="center">
-  <a href="docs/media/lumen-launch.mp4"><b>▶ Watch the launch video, 37 seconds</b></a>
-</p>
+Скачайте универсальный подписанный APK из [последнего стабильного релиза](https://github.com/s0dom667-maker/Lumen-RU/releases/latest). Требуется Android 11 или новее. APK поддерживает arm64-v8a, armeabi-v7a и x86_64.
 
-Lumen is a photo gallery for Android. It does the same tasks as Google Photos and the Photos app
-on iPhone. It finds a photo from a description, reads the text in your photos, puts the photos
-of each person together, and cuts a person out of a photo. Lumen does all of this work on your phone. Your photos, your faces, and
-your index never leave it.
+В Obtainium добавьте адрес:
 
-## Why Lumen
+```text
+https://github.com/s0dom667-maker/Lumen-RU
+```
 
-Google Photos does this work on the servers of Google, and you must have a Google account. The
-Photos app on iPhone does the work on the phone, but it is only for Apple devices. Lumen gives you
-the same features on Android, without Google and without the cloud.
+В каждом релизе один APK. При необходимости используйте фильтр `^Lumen-RU-.*-universal\.apk$`. Предварительные релизы не нужны. GitHub Release tag `vX.Y.Z` соответствует APK versionName `X.Y.Z`; versionCode растёт независимо от оригинального проекта.
 
-- **No account.** You do not sign in to Google or to Lumen.
-- **No Google Play services.** Lumen does not use them, so it works on phones without Google apps.
-- **No cloud.** Lumen does not send your photos or their data to a server.
-- **No advertisements, no analytics, and no tracking.**
-- **Works offline.** After you download the models one time, the smart features work without the
-  internet.
-- **Open source.** Anyone can read and do a check of the code.
-- **No cost.**
+Для проверки скачанного файла используйте приложенный `SHA256SUMS.txt`:
 
-## Lumen and Google Photos
+```bash
+sha256sum -c SHA256SUMS.txt
+```
 
-✅ Lumen has it · ◐ Lumen has part of it · 🚧 Lumen is working on it · ❌ Lumen does not have it
+Отпечаток сертификата подписи опубликован в [signing-certificate.sha256](signing-certificate.sha256). SHA-256 APK и сертификата — разные величины. Встроенная проверка обновлений также обращается к релизам **Lumen-RU**.
 
-| Feature | Google Photos | Lumen |
-|---|---|---|
-| Find photos from a description ("cat on a sofa") | ✅ On the servers of Google | ✅ On your phone |
-| Find photos from the words in them | ✅ | ✅ |
-| Select and copy text in a photo | ✅ With Google Lens | ✅ |
-| Find the text in videos | ❌ | ✅ |
-| Put the photos of each person together | ✅ | ✅ |
-| Name, merge and hide people | ✅ | ✅ |
-| Put the photos of each pet together | ✅ | ❌ |
-| Subtitles for the speech in your videos | ❌ | ✅ |
-| Albums | ✅ | ✅ The folders on your phone |
-| Favorites and Recently Deleted | ✅ | ✅ |
-| Locked folder | ✅ | ✅ Hidden, with encryption |
-| Map of your photos | ✅ | ◐ The place of each photo |
-| Memories | ✅ | ❌ |
-| Edit photos (crop, light, filters) | ✅ | ◐ Rotate and resize |
-| Cut out a person or an object | ✅ | ✅ |
-| Magic Eraser | ✅ | 🚧 |
-| Ultra HDR photos | ✅ | ✅ |
-| Back up to the cloud | ✅ | ❌ Lumen keeps your photos on your phone |
-| Shared albums and links | ✅ | ❌ |
-| Smart features without the internet | ❌ | ✅ |
-| Works without a Google account | ❌ | ✅ |
-| Works without Google Play services | ❌ | ✅ |
-| Open source | ❌ | ✅ |
+## Разработка
 
-## Contents
+[RELEASE.md](RELEASE.md) описывает сборку, выпуск версий, обновление upstream, проверку переводов и резервное копирование ключа.
 
-- [Why Lumen](#why-lumen)
-- [Lumen and Google Photos](#lumen-and-google-photos)
-- [Features](#features)
-- [Privacy](#privacy)
-- [Requirements](#requirements)
-- [Install Lumen](#install-lumen)
-- [Smart features](#smart-features)
-- [Faster on Snapdragon](#faster-on-snapdragon)
-- [Permissions](#permissions)
-- [Build Lumen from the source code](#build-lumen-from-the-source-code)
-- [Report a bug](#report-a-bug)
-- [License](#license)
+```bash
+./release.sh --build-only
+./release.sh patch
+./release.sh minor
+```
 
-## Features
-
-### Library and albums
-
-- See all of your photos and videos in one grid. The newest photo is at the bottom.
-- New photos and screenshots appear at once.
-- Pinch the grid to show more or fewer columns.
-- Show the photos by year or by month.
-- Show only photos, videos, favorites, or screenshots. Sort by date, name, or size.
-- See each folder on your phone as an album. Sort, pin, rename, and set the cover of an album.
-  Tap a sort again to reverse it.
-- Open Favorites, Videos, Screenshots, and Recently Deleted from Collections.
-- Hide folders that you do not want to see, for example folders of app icons.
-
-### Viewer
-
-- Swipe between photos. Swipe down to close a photo. Swipe up to see its details and the
-  people in it.
-- See the date, the camera data, the file data, and the place where you took the photo.
-- See a map of the place, if you turn on Maps.
-- Use the film strip at the bottom to move quickly through many photos.
-- Zoom into photos and videos.
-- See Ultra HDR photos with their full brightness on phones that have a high dynamic range (HDR)
-  screen.
-- Play videos at a different speed. Double tap a video to pause it or to skip 10 seconds.
-- Start a slideshow.
-- Select the text in a photo with the text tools of Android: copy, share, translate, or open a
-  link, a phone number, or an address.
-- Turn on subtitles for a video, made on your phone.
-- Touch and hold a person or an object to cut it out of the photo. Then copy it, share it, or
-  save it as a new image with a transparent background. When you open a photo of people, a line
-  draws around them to show that you can cut them out.
-
-### People
-
-- See the people in your photos and videos. Lumen puts the photos of each person together.
-- Name a person, merge two people, or hide a person.
-- Take a photo out of a person with Not This Person.
-- Name a face that Lumen did not put with a person, from the details of a photo.
-- On the page of a person, show only photos, videos, favorites, or screenshots, and sort them.
-
-### Tools
-
-- Share, copy, move, rename, rotate, and resize photos.
-- Change the date of a photo.
-- Set a photo as the wallpaper.
-- Let other apps open photos in Lumen. Let other apps get photos from Lumen.
-- Bring your favorites from Fossify Gallery or Aves.
-- Export your Lumen settings to a file, and import them again.
-
-### Hidden photos and locks
-
-- Hide photos and folders in Hidden. Lumen uses the same hidden files as Fossify Gallery.
-- Lock Hidden with a PIN, a pattern, or a password, and unlock it with your fingerprint or face.
-- Encrypt the photos in Hidden, if you turn on Encrypt Hidden.
-- Lock all of Lumen with the App Lock.
-- Lumen blocks screenshots and screen recordings of Hidden. You can allow them in Settings.
-
-## Privacy
-
-Lumen does its work on your phone. It does not send your photos, their data, or your personal data to
-a server. Lumen uses the internet for 3 tasks only:
-
-| Task | Server | When |
-|---|---|---|
-| Download the models for the smart features | Hugging Face | Only when you tap Download in Settings, or in the first setup |
-| Show map tiles | OpenFreeMap | When Maps is on and you open the details of a photo that has a place |
-| Look for a new version of Lumen | GitHub | Once each day if Check Automatically is on, or when you tap Software Update |
-
-You can turn off Maps and Check Automatically in Settings. Lumen never asks for the location of
-your phone. It reads only the location that the camera put in each photo.
-
-## Requirements
-
-- An Android phone with Android 11 or later.
-- For the smart features, space on the phone for the models. All the models need about 440 MB
-  with the Fast search model, or about 860 MB with the Accurate search model (about 810 MB on a
-  phone with a supported Snapdragon NPU).
-
-The smart features are optional. Lumen works as a gallery without them.
-
-## Install Lumen
-
-Lumen is available as an APK file, the Android package file, on the
-[Releases page](https://github.com/subhashhhhhh/Lumen/releases). Lumen is not on F-Droid or
-Google Play yet.
-
-1. Open the [Releases page](https://github.com/subhashhhhhh/Lumen/releases) on your phone.
-2. Download the APK file of the latest release.
-3. Open the APK file.
-4. If Android asks, let your browser install apps.
-5. Tap Install.
-
-When a new version is available, Lumen shows it at the top of Settings. To install it, go to
-Settings, then About, then Software Update.
-
-## Smart features
-
-The smart features use models. A model is a file that lets the phone recognize the contents of a
-photo. Lumen does not include the models in the app. Lumen downloads them when you ask for them.
-
-| Feature | What it does | Model |
-|---|---|---|
-| Smart Search | Finds photos from a description, for example "cat on a sofa" | SigLIP 2 for Accurate, or OpenCLIP for Fast |
-| Text in photos and videos | Finds photos and videos from the words in them. Lets you select and copy text in a photo | PP-OCRv6 |
-| People | Finds faces and puts the photos of each person together | YuNet, and AdaFace for Accurate or EdgeFace for Fast |
-| Subtitles | Writes subtitles for the speech in your videos | Whistle and Silero VAD |
-| Cutout | Cuts a person or an object out of a photo | BiRefNet-lite, changed by Lumen to run on phones |
-
-After the download, Lumen makes an index of your photos. By default, this work occurs only
-while your phone charges. Lumen stops the work when the phone gets warm, and starts again later.
-You can also set a time of night for this work in Scheduled Indexing.
-
-The models are on [Hugging Face](https://huggingface.co/subhashhhhhh). Each model has a fixed
-version. Lumen does a check of each file with its SHA-256 checksum before it uses the file.
-
-## Faster on Snapdragon
-
-Many phones with a Snapdragon processor have an NPU, a part of the processor for AI. On these
-phones, Lumen runs Smart Search, text detection, and Accurate face recognition on the NPU:
-
-- Indexing photos for Smart Search is about 9 times faster than on the CPU.
-- The Accurate search model is a smaller download, about 480 MB instead of 670 MB.
-- Accurate face recognition is available only with an NPU. Other phones use Fast.
-
-Lumen supports 40 Snapdragon processors, from the Snapdragon 7 Gen 1 and 8 Gen 1 to the
-newest ones. The Snapdragon 888 and 888+ are not supported. Before Lumen uses the NPU, it makes
-sure that the NPU gives the correct results. If it does not, Lumen uses the GPU or the CPU. To see
-which one Lumen uses, go to Settings, then Smart Search, and look at Runs On.
-
-Cutout runs on the GPU of the phone, because on the phones that we tested, the GPU is faster than
-the NPU for this model. It needs about 0.2 seconds on a Snapdragon 7 Gen 1.
-
-## Permissions
-
-| Permission | Why Lumen needs it |
-|---|---|
-| Photos and videos | To show the photos and videos on your phone |
-| All files access, optional | To show hidden files and folders, and to change favorites quickly |
-| Media management, optional | To delete and to mark favorites without a question from Android each time |
-| Location in photos | To read the place where you took a photo |
-| Notifications | To show the progress of a download or of the index |
-| Fingerprint or face | To unlock Hidden and the App Lock |
-| Install apps | To install a new version of Lumen from Software Update |
-| Wallpaper | To set a photo as the wallpaper |
-| Internet | For the tasks in [Privacy](#privacy) |
-
-## Build Lumen from the source code
-
-You need these tools:
-
-- The Java Development Kit (JDK) 17 or later.
-- The Android Software Development Kit (SDK) with Android platform 37.
-- The Android Native Development Kit (NDK) 30, for the speech engine.
-
-Do these steps:
-
-1. Get the source code. The smart features come from [Lumen AI](https://github.com/subhashhhhhh/lumen-ai),
-   which Gradle downloads from Maven Central:
-
-   ```sh
-   git clone https://github.com/subhashhhhhh/Lumen.git
-   cd Lumen
-   ```
-
-2. Build the debug APK:
-
-   ```sh
-   ./gradlew :app:assembleDebug
-   ```
-
-3. Install the APK on a phone that has USB debugging on:
-
-   ```sh
-   adb install app/build/outputs/apk/debug/app-debug.apk
-   ```
-
-The debug app has a different app ID, `com.subhashh.lumen.debug`. It does not replace a release
-version of Lumen.
-
-The release APKs are built and signed by GitHub Actions from the tagged source code of Lumen
-and Lumen AI, so you can see how each release was made.
-
-The `tools` folder has scripts for the place names, the icons, and the speed checks. You do not
-need them to build the app. The scripts that make the model files are in a different repository.
-
-## Report a bug
-
-1. Open the [Issues page](https://github.com/subhashhhhhh/Lumen/issues).
-2. Do a search for an issue with the same problem.
-3. If no issue has the same problem, open a new issue.
-4. Write the version of Lumen. You can find it in Settings, then About.
-5. Write the name of your phone and the version of Android.
-6. Write the steps that cause the problem.
-
-You can also open the Issues page from Lumen. Go to Settings, then About, then Report a Bug.
-
-## License
-
-Lumen is open source under the [Apache License 2.0](LICENSE). Copyright 2026 Subhash Gottumukkala.
-
-Lumen uses the work of many open source projects, for example Backdrop by Kyant0, Coil,
-Telephoto, Media3, ONNX Runtime, LiteRT, and MapLibre. The place names come from GeoNames, and
-the map data comes from OpenStreetMap. For the full list and the licenses, see [NOTICE](NOTICE)
-and Settings, then About, then Open-Source Licenses.
+Лицензия исходников: [Apache-2.0](LICENSE). [NOTICE](NOTICE) и уведомления сторонних компонентов сохранены; отдельные бинарные зависимости распространяются на своих условиях. RU — самостоятельная сборка, не официальный релиз автора Lumen.

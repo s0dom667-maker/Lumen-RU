@@ -1,3 +1,6 @@
+// Modified 2026 by s0dom667-maker: independent identity, versioning and external signing.
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
@@ -8,13 +11,16 @@ plugins {
 val lab: File = rootProject.file("../lumen-lab")
 val hasLab = lab.resolve("src/java").isDirectory
 
-/**
- * The release key stays outside the repository. Release builds are signed only when its password
- * is given, e.g. LUMEN_KEY_PASSWORD from the macOS Keychain; otherwise they come out unsigned.
- */
-val releaseKeyPassword: String? = providers.environmentVariable("LUMEN_KEY_PASSWORD").orNull
-val releaseKeyStore: File = providers.environmentVariable("LUMEN_KEYSTORE").orNull?.let(::File)
-    ?: File(System.getProperty("user.home"), ".lumen-signing/lumen-release.jks")
+// Lumen RU: keys and passwords live outside the checkout; never sign with a debug key.
+val ruVersion = Properties().apply {
+    rootProject.file("version.properties").inputStream().use { load(it) }
+}
+val signingPath = providers.environmentVariable("LUMEN_RU_SIGNING_PROPERTIES").orNull
+    ?: rootProject.file("../.android-release-private/lumen-ru/signing.properties").absolutePath
+val ruSigning = Properties().apply {
+    val config = File(signingPath)
+    if (config.isFile) config.inputStream().use { load(it) }
+}
 
 android {
     namespace = "com.subhashh.lumen"
@@ -22,23 +28,26 @@ android {
 
     defaultConfig {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        applicationId = "com.subhashh.lumen"
+        applicationId = "io.github.s0dom667maker.lumenru"
         // Android 11: All files access (hidden folders) and MediaStore trash.
         minSdk = 30
         targetSdk = 37
-        versionCode = 13
-        versionName = "0.4.2"
+        versionCode = ruVersion.getProperty("versionCode").toInt()
+        versionName = ruVersion.getProperty("versionName")
     }
 
     signingConfigs {
-        if (releaseKeyPassword != null) {
+        if (!ruSigning.isEmpty()) {
             create("release") {
-                storeFile = releaseKeyStore
-                storePassword = releaseKeyPassword
-                keyAlias = "lumen"
-                keyPassword = releaseKeyPassword
+                storeFile = File(ruSigning.getProperty("storeFile"))
+                storePassword = ruSigning.getProperty("storePassword")
+                keyAlias = ruSigning.getProperty("keyAlias")
+                keyPassword = ruSigning.getProperty("keyPassword")
             }
         }
+    }
+    if (gradle.startParameter.taskNames.any { it.contains("Release", ignoreCase = true) }) {
+        check(!ruSigning.isEmpty()) { "Missing external Lumen RU signing.properties; see RELEASE.md" }
     }
 
     // Release APKs per processor, plus one universal APK. Only for release tasks, so debug and
@@ -101,6 +110,14 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
+    lint {
+        baseline = file("lint-baseline-upstream.xml")
+    }
+
+    testOptions {
+        unitTests.isIncludeAndroidResources = true
+    }
+
     buildFeatures {
         compose = true
     }
@@ -149,6 +166,7 @@ androidComponents {
 
 dependencies {
     testImplementation(libs.junit)
+    testImplementation("org.robolectric:robolectric:4.17")
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.androidx.test.runner)
     // Android's org.json is a stub in local tests; the real one stands in.

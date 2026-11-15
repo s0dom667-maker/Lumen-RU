@@ -1,3 +1,4 @@
+// Modified 2026 by s0dom667-maker for Lumen RU: RU app name and repository links.
 package com.subhashh.lumen.ui.settings
 
 import androidx.compose.animation.core.Animatable
@@ -860,7 +861,7 @@ private fun ColumnScope.AboutPage(
         Anchor("github", highlight) {
             SettingsRow(
                 title = stringResource(R.string.settings_github),
-                value = "subhashhhhhh/Lumen",
+                value = "s0dom667-maker/Lumen-RU",
                 onClick = { open(RepoUrl) },
                 icon = LumenIcons.Code,
                 iconColor = Gray,
@@ -876,7 +877,7 @@ private fun ColumnScope.AboutPage(
             )
         }
     }
-    Group("Lumen") {
+    Group(stringResource(R.string.app_name)) {
         Anchor("licenses", highlight) {
             SettingsRow(
                 title = stringResource(R.string.settings_licenses),
@@ -933,7 +934,7 @@ private fun AboutHeader(version: String, onDeveloper: () -> Unit) {
     ) {
         com.subhashh.lumen.ui.components.AppIcon(96.dp)
         Spacer(Modifier.height(14.dp))
-        Text("Lumen", fontSize = 28.sp, fontWeight = FontWeight.Bold, color = colors.text)
+        Text(stringResource(R.string.app_name), fontSize = 28.sp, fontWeight = FontWeight.Bold, color = colors.text)
         Text(stringResource(R.string.settings_version_value, version), fontSize = 15.sp, color = colors.secondary)
         Spacer(Modifier.height(10.dp))
         val developerName = "Subhash Gottumukkala"
@@ -953,7 +954,7 @@ private fun AboutHeader(version: String, onDeveloper: () -> Unit) {
 }
 
 private const val DeveloperUrl = "https://github.com/subhashhhhhh"
-private const val RepoUrl = "https://github.com/subhashhhhhh/Lumen"
+private const val RepoUrl = "https://github.com/s0dom667-maker/Lumen-RU"
 
 @Composable
 private fun ColumnScope.DeveloperPage(prefs: LumenPrefs, highlight: String?) {

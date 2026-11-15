@@ -1,3 +1,4 @@
+// Modified 2026 by s0dom667-maker for Lumen RU: RU target application id.
 package com.subhashh.lumen.baselineprofile
 
 import androidx.benchmark.macro.MacrobenchmarkScope
@@ -28,7 +29,7 @@ class BaselineProfileGenerator {
 
     @Test
     fun generate() = rule.collect(
-        packageName = InstrumentationRegistry.getArguments().getString("targetAppId") ?: "com.subhashh.lumen",
+        packageName = InstrumentationRegistry.getArguments().getString("targetAppId") ?: "io.github.s0dom667maker.lumenru",
         includeInStartupProfile = true,
     ) {
         // A fresh install would stop at the permission screen.

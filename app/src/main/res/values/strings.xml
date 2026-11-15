@@ -3,8 +3,9 @@
   Lumen's English text. Translations live in values-<language>/strings.xml and are edited on
   Weblate; keep placeholders (%1$s, %2$d) and plural forms as they are.
 -->
+<!-- Modified 2026 by s0dom667-maker: RU app name and update error resources. -->
 <resources>
-    <string name="app_name" translatable="false">Lumen</string>
+    <string name="app_name" translatable="false">Lumen RU</string>
 
     <!-- ===== Words used across many screens ===== -->
     <string name="common_cancel">Cancel</string>
@@ -1233,4 +1234,8 @@
     <string name="smart_runs_on_needs_accurate">This phone\'s NPU runs the Accurate model only.</string>
     <string name="smart_runs_on_npu_failed">The NPU didn\'t pass Lumen\'s check, so it isn\'t used: %1$s. Lumen tries again after an update.</string>
     <string name="settings_group_info">About %1$s</string>
+    <string name="data_update_http">GitHub answered %1$d</string>
+    <string name="data_update_no_apk">The latest release has no APK</string>
+    <string name="data_update_unreachable">Could not reach GitHub</string>
+    <string name="data_update_checksum">The download does not match the release checksum</string>
 </resources>

@@ -1,3 +1,4 @@
+// Modified 2026 by s0dom667-maker for Lumen RU: RU release source and localized update errors.
 package com.subhashh.lumen.data
 
 import android.app.PendingIntent
@@ -24,8 +25,8 @@ import java.net.URL
  * those builds when distribution is set up.
  */
 object Updater {
-    const val RepoUrl = "https://github.com/subhashhhhhh/Lumen"
-    private const val LatestApi = "https://api.github.com/repos/subhashhhhhh/Lumen/releases/latest"
+    const val RepoUrl = "https://github.com/s0dom667-maker/Lumen-RU"
+    private const val LatestApi = "https://api.github.com/repos/s0dom667-maker/Lumen-RU/releases/latest"
 
     class Release(
         val version: String,
@@ -59,7 +60,7 @@ object Updater {
                 when (code) {
                     404 -> return@runCatching Check.NoReleases
                     200 -> Unit
-                    else -> return@runCatching Check.Failed("GitHub answered ${connection.responseCode}")
+                    else -> return@runCatching Check.Failed(context.getString(R.string.data_update_http, connection.responseCode))
                 }
                 val json = JSONObject(connection.inputStream.bufferedReader().use { it.readText() })
                 val version = json.getString("tag_name").removePrefix("v")
@@ -71,7 +72,7 @@ object Updater {
                 val apk = Build.SUPPORTED_ABIS.firstNotNullOfOrNull { abi -> apks.firstOrNull { "-$abi." in it.getString("name") } }
                     ?: apks.firstOrNull { "universal" in it.getString("name") }
                     ?: apks.firstOrNull()
-                    ?: return@runCatching Check.Failed("The latest release has no APK")
+                    ?: return@runCatching Check.Failed(context.getString(R.string.data_update_no_apk))
                 if (!isNewer(version, installedVersion(context))) return@runCatching Check.UpToDate
                 Check.Available(
                     Release(
@@ -86,7 +87,7 @@ object Updater {
             } finally {
                 connection.disconnect()
             }
-        }.getOrElse { Check.Failed("Couldn't reach GitHub") }
+        }.getOrElse { Check.Failed(context.getString(R.string.data_update_unreachable)) }
     }
 
     fun installedVersion(context: Context): String =
@@ -135,7 +136,7 @@ object Updater {
         // A cut-off or altered download stops here, before the installer sees it.
         if (release.apkSha256 != null && sha256(file) != release.apkSha256) {
             file.delete()
-            throw java.io.IOException("The download doesn't match the release's checksum")
+            throw java.io.IOException(context.getString(R.string.data_update_checksum))
         }
         file
     }
